@@ -1,0 +1,23 @@
+ALGORITHM CHARACTERS
+VAR 
+   S : STRING;
+   i,vowelNb: INTEGER:=0;
+   wordNb : INTEGER:=1;
+BEGIN 
+    Write("Enter a sentence ends with a point :");
+    Read(S);
+    WHILE ( S[i] <>'.' ) DO    
+      IF (S[i]=' ') THEN
+        wordNb := wordNb + 1; // "wordNb" is the number of words in the string S.
+      END_IF
+    
+      IF (S[i]='a' OR S[i]='e' OR S[i]='i' OR S[i]='o' OR S[i]='u') THEN
+        vowelNb := vowelNb +1; // "vowelNb" is the number of vowels in the string S.
+      END_IF
+      i:=i+1;  // "i" is the counter in the string S also it represents the number of characters.   
+    END_WHILE 
+
+    Write("The number of charachters (Exept the point) in the sentence is : 'i' ");
+    Write("The number of words in the sentence is : 'wordNb' ");
+    Write("The number of vowels in the sentence is : 'vowelNb' ");
+END
